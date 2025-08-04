@@ -13,6 +13,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Notify Render for deployment
-        run: |
-          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+      - name: Notify Render
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
